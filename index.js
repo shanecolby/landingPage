@@ -22,7 +22,7 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
             <img src=${data.image.small} />
             <span>${data.name}</span>
         `
-    document.getElementById("crypto").innerHTML += `
+    document.getElementById("crypto-doge").innerHTML += `
     <p>🎯current: $${data.market_data.current_price.usd}</p>
     <p>👆24hr high: $${data.market_data.high_24h.usd}</p>
     <p>👇24hr low: $${data.market_data.low_24h.usd}</p>
@@ -44,10 +44,10 @@ fetch("https://api.coingecko.com/api/v3/coins/ethereum")
   })
   .then(data => {
     document.getElementById("crypto-bottom").innerHTML = `
-            <img src=${data.image.small} />
+            <img class="ethereum" src=${data.image.small} />
             <span>${data.name}</span>
         `
-    document.getElementById("crypto").innerHTML += `
+    document.getElementById("crypto-eth").innerHTML += `
     <p>🎯current: $${data.market_data.current_price.usd}</p>
     <p>👆24hr high: $${data.market_data.high_24h.usd}</p>
     <p>👇24hr low: $${data.market_data.low_24h.usd}</p>
