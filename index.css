@@ -58,9 +58,8 @@ div#crypto-eth {
 
 div#crypto-top {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 div#crypto-top > span {
@@ -70,9 +69,9 @@ div#crypto-top > span {
 
 div#crypto-bottom {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-top: -75px;
+  margin-left: -10px;
 }
 
 
