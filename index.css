@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
-}    
+}
 
 body {
   margin: 0;
-  background: no-repeat center center fixed; 
+  background: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,16 +33,22 @@ div.top-eth {
   justify-content: space-between;
 }
 
+
+
 h1.time {
   text-align: center;
   font-size: 3rem;
 }
 
-div#crypto-doge > p {
+div#crypto-doge>p {
   margin: 0;
 }
 
-div#crypto-eth > p {
+div#crypto-eth>p {
+  margin: 0;
+}
+
+div#crypto-bit>p {
   margin: 0;
 }
 
@@ -56,13 +62,18 @@ div#crypto-eth {
   font-size: 1.3rem;
 }
 
+div#crypto-bit {
+  align-self: flex-start;
+  font-size: 1.3rem;
+}
+
 div#crypto-top {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-div#crypto-top > span {
+div#crypto-top>span {
   margin-left: 10px;
 }
 
@@ -84,7 +95,7 @@ div#weather {
   align-self: flex-start;
 }
 
-div#weather > img {
+div#weather>img {
   width: 70px;
 }
 
@@ -98,5 +109,5 @@ p.weather-city {
 p.weather-temp {
   margin: 0;
   font-size: 1.7rem;
- 
+
 }
