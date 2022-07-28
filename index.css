@@ -20,9 +20,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: flex-start;
 }
 
 div.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.middle {
   display: flex;
   justify-content: space-between;
 }
@@ -48,12 +54,13 @@ div#crypto-eth>p {
   margin: 0;
 }
 
-div#crypto-bit>p {
+div#crypto-bitcoin>p {
   margin: 0;
 }
 
 
 div#crypto-doge {
+  align-self: flex-start;
   font-size: 1.3rem;
 }
 
@@ -62,7 +69,7 @@ div#crypto-eth {
   font-size: 1.3rem;
 }
 
-div#crypto-bit {
+div#crypto-bitcoin {
   align-self: flex-start;
   font-size: 1.3rem;
 }
@@ -77,12 +84,25 @@ div#crypto-top>span {
   margin-left: 10px;
 }
 
+div#crypto-middle {
+  display: flex;
+  align-items: center;
+  margin-top: -50px;
+}
+
+div#crypto-middle>span {
+  margin-left: 10px;
+}
 
 div#crypto-bottom {
   display: flex;
   align-items: center;
   margin-top: -75px;
   margin-left: -10px;
+}
+
+div#crypto-bottom>span {
+  margin-left: 10px;
 }
 
 

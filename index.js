@@ -35,6 +35,31 @@ function getCurrentTime() {
   document.getElementById("time").innerHTML = `${date.toLocaleTimeString("en-us", { timeStyle: "medium" })}`
 }
 
+fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
+  .then(res => {
+    if (!res.ok) {
+      throw Error("Something went wrong")
+    }
+    return res.json()
+  })
+  .then(data => {
+    document.getElementById("crypto-middle").innerHTML = `
+            <img src=${data.image.small} />
+            <span>${data.name}</span>
+        `
+    document.getElementById("crypto-bitcoin").innerHTML += `
+    <p>🎯current: $${data.market_data.current_price.usd}</p>
+    <p>👆24hr high: $${data.market_data.high_24h.usd}</p>
+    <p>👇24hr low: $${data.market_data.low_24h.usd}</p>
+`
+  })
+  .catch(err => console.error(err))
+
+function getCurrentTime() {
+  const date = new Date()
+  document.getElementById("time").innerHTML = `${date.toLocaleTimeString("en-us", { timeStyle: "medium" })}`
+}
+
 fetch("https://api.coingecko.com/api/v3/coins/ethereum")
   .then(res => {
     if (!res.ok) {
@@ -60,30 +85,7 @@ function getCurrentTime() {
   document.getElementById("time").innerHTML = `${date.toLocaleTimeString("en-us", { timeStyle: "medium" })}`
 }
 
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
-  .then(res => {
-    if (!res.ok) {
-      throw Error("Something went wrong")
-    }
-    return res.json()
-  })
-  .then(data => {
-    document.getElementById("crypto-top").innerHTML = `
-            <img src=${data.image.small} />
-            <span>${data.name}</span>
-        `
-    document.getElementById("crypto-doge").innerHTML += `
-    <p>🎯current: $${data.market_data.current_price.usd}</p>
-    <p>👆24hr high: $${data.market_data.high_24h.usd}</p>
-    <p>👇24hr low: $${data.market_data.low_24h.usd}</p>
-`
-  })
-  .catch(err => console.error(err))
 
-function getCurrentTime() {
-  const date = new Date()
-  document.getElementById("time").innerHTML = `${date.toLocaleTimeString("en-us", { timeStyle: "medium" })}`
-}
 
 
 setInterval(getCurrentTime, 1000)
